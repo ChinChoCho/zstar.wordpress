@@ -30,9 +30,14 @@ body {
 }
 a {
     text-decoration: none;
+    color: #021299;
 }
 ul {
     list-style: none;
+}
+h1 {
+    margin: 0;
+    font-size: 18px;
 }
 .wrapper-inner {
     max-width: 1170px;
@@ -133,12 +138,13 @@ ul {
         display: block;
         padding: 10px 20px;
         font-size: 16px;
-        font-weight: normal;
+        font-weight: bold;
         color: #fff;
         transition: $transition;
         span {
             display: block;
             font-size: 13px;
+            font-weight: normal;
             color: #ddd;
         }
         &:hover,
@@ -184,8 +190,19 @@ ul {
     height: 395px;
     overflow: hidden;
     &__item {
+        cursor: pointer;
         position: absolute;
         transition: $transition * 2;
+        &:hover {
+            .slider__item {
+                &-title {
+                    width: 100%;
+                }
+                &-description {
+                    opacity: 1;
+                }
+            }
+        }
         &:first-child {
             border: none;
         }
@@ -198,5 +215,102 @@ ul {
         & + & {
             border-left: 1px solid #fff;
         }
+        &-text-wrapper {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #021299;
+            opacity: 0.8;
+            color: #fff;
+            height: 25%;
+            width: 100%;
+            padding: 20px;
+        }
+        &-title {
+            width: calc(1170px / 3 - 20px);
+            margin-bottom: 10px;
+            font-size: 16px;
+            //transition: $transition * 2;
+        }
+        &-description {
+            font-size: 14px;
+            opacity: 0;
+            //transition: $transition;
+        }
     }
+}
+// mainframe
+.wrapper-inner-mainframe {
+    background: #f2f2f2;
+}
+//sidebar
+.mainframe__sidebar {
+    padding: 20px 0;
+    width: 22%;
+    text-align: center;
+    hr {
+        height: 3px;
+        background-color: #ccc;
+        border: none;
+        //width: 70%;
+        margin: 0 auto;
+    }
+}
+.sidebar {
+    &-banners {
+        margin-bottom: 20px;
+        &__item {
+            display: block;
+            margin: 10px 0;
+            img {
+                max-width: 100%;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+//news
+.news {
+    text-align: center;
+    &-title {
+    }
+    &-wrapper-inner {
+        margin-top: 15px;
+    }
+    &__item {
+        font-size: 15px;
+        margin: 10px 0;
+        text-align: left;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            float: left;
+            outline: 2px #ccc solid;
+            margin: 7px 10px 5px 2px;
+        }
+        &-title {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &-description {
+            margin: 10px 0;
+        }
+    }
+}
+//main-content
+.mainframe_content {
+    padding: 20px;
 }

@@ -12,10 +12,16 @@ body {
 
 a {
   text-decoration: none;
+  color: #021299;
 }
 
 ul {
   list-style: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
 }
 
 .wrapper-inner {
@@ -164,7 +170,7 @@ ul {
   display: block;
   padding: 10px 20px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   color: #fff;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
@@ -174,6 +180,7 @@ ul {
 .main-menu__item-link span {
   display: block;
   font-size: 13px;
+  font-weight: normal;
   color: #ddd;
 }
 
@@ -236,10 +243,19 @@ ul {
 }
 
 .slider__item {
+  cursor: pointer;
   position: absolute;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
+}
+
+.slider__item:hover .slider__item-title {
+  width: 100%;
+}
+
+.slider__item:hover .slider__item-description {
+  opacity: 1;
 }
 
 .slider__item:first-child {
@@ -258,4 +274,112 @@ ul {
 
 .slider__item + .slider__item {
   border-left: 1px solid #fff;
+}
+
+.slider__item-text-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #021299;
+  opacity: 0.8;
+  color: #fff;
+  height: 25%;
+  width: 100%;
+  padding: 20px;
+}
+
+.slider__item-title {
+  width: -webkit-calc(1170px / 3 - 20px);
+  width: calc(1170px / 3 - 20px);
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.slider__item-description {
+  font-size: 14px;
+  opacity: 0;
+}
+
+.wrapper-inner-mainframe {
+  background: #f2f2f2;
+}
+
+.mainframe__sidebar {
+  padding: 20px 0;
+  width: 22%;
+  text-align: center;
+}
+
+.mainframe__sidebar hr {
+  height: 3px;
+  background-color: #ccc;
+  border: none;
+  margin: 0 auto;
+}
+
+.sidebar-banners {
+  margin-bottom: 20px;
+}
+
+.sidebar-banners__item {
+  display: block;
+  margin: 10px 0;
+}
+
+.sidebar-banners__item img {
+  max-width: 100%;
+}
+
+.sidebar-banners__item:first-child {
+  margin-top: 0;
+}
+
+.sidebar-banners__item:last-child {
+  margin-bottom: 0;
+}
+
+.news {
+  text-align: center;
+}
+
+.news-wrapper-inner {
+  margin-top: 15px;
+}
+
+.news__item {
+  font-size: 15px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.news__item:first-child {
+  margin-top: 0;
+}
+
+.news__item:last-child {
+  margin-bottom: 0;
+}
+
+.news__item img {
+  float: left;
+  outline: 2px #ccc solid;
+  margin: 7px 10px 5px 2px;
+}
+
+.news__item-title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.news__item-title:hover {
+  text-decoration: none;
+}
+
+.news__item-description {
+  margin: 10px 0;
+}
+
+.mainframe_content {
+  padding: 20px;
 }
