@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
+    <body class="body">
         <section class="wrapper-inner-header">
             <div class="wrapper-inner wrapper-inner-header__top">
                 <div class="wrapper-logo">
@@ -22,7 +22,9 @@
                 </div>
                 <div class="wrapper-contacts">
                     <span class="wrapper-contacts-address"
-                        >Алматы, 8 микрорайон, ул. Шаляпина, 31а</span
+                        ><span>Алматы</span
+                        ><span class="delete">, 8 микрорайон</span
+                        ><span>, <br />ул. </span>Шаляпина, 31а</span
                     >
                     <div class="wrapper-contacts-main">
                         <div class="wrapper-contacts-main__phones">
@@ -74,8 +76,17 @@
             <div class="wrapper-inner-header__bottom">
                 <div class="wrapper-inner">
                     <div class="wrapper-navigation">
-                        <nav class="main-menu">
-                            <ul class="wrapper-main-menu">
+                        <!-- new wrapper-main-menu main-menu-->
+                        <!-- <div class="wrapper-main-menu main-menu"> -->
+                        <div class="main-menu__icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <!-- main-menu__body -->
+                        <nav class="main-menu__body">
+                            <!-- main-menu__list -->
+                            <ul class="main-menu__list">
                                 <li class="main-menu__item">
                                     <a
                                         href="#"
@@ -114,6 +125,7 @@
                                 </li>
                             </ul>
                         </nav>
+                        <!-- </div> -->
                         <form action="" method="get" class="search-form">
                             <div class="wrapper-search">
                                 <input
@@ -131,6 +143,7 @@
                     </div>
                 </div>
             </div>
+            <div class="sticky-padding"></div>
         </section>
         <section class="wrapper-inner-slider">
             <div class="wrapper-inner">
@@ -581,6 +594,8 @@
                 </article>
             </div>
         </section>
+        <script src="js/slider.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/sticky_menu.js"></script>
     </body>
 </html>

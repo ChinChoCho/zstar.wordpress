@@ -19,6 +19,8 @@
 }
 
 $transition: 0.2s;
+$width-lg: 991.9px;
+$width-md: 767.9px;
 
 * {
     box-sizing: border-box;
@@ -28,6 +30,9 @@ $transition: 0.2s;
 body {
     @include OpenSans;
     // font-size: 16px;
+}
+body._active {
+    overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -43,14 +48,34 @@ h1 {
 p {
     margin: 10px 0;
 }
+// прилипающее меню
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+// \рилипающее меню
 .wrapper-inner {
-    max-width: 1170px;
+    max-width: 1190px;
     margin: 0 auto;
+    padding: 0 10px;
+}
+.wrapper-logo {
+    z-index: 3;
+    @media (max-width: $width-md) {
+        width: 200px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 .fix {
     display: flex;
     align-items: center;
     text-align: center;
+    width: 100%;
+    img {
+        width: 100%;
+    }
 }
 .logo-text {
     font-size: 25px;
@@ -58,6 +83,9 @@ p {
     color: #021299;
     line-height: 2rem;
     white-space: nowrap;
+    @media (max-width: $width-lg) {
+        display: none;
+    }
 }
 .t {
     &2 {
@@ -67,21 +95,65 @@ p {
 }
 .wrapper-inner-header__top {
     display: flex;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (max-width: $width-md) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 .wrapper-contacts {
+    z-index: 3;
     text-align: center;
     margin-left: auto;
+    font-size: 16px;
+    @media (max-width: $width-md) {
+        font-size: 14px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+.wrapper-contacts-address {
+    text-align: center;
+    white-space: nowrap;
+    br {
+        display: none;
+    }
+    @media (max-width: 540px) {
+        .delete {
+            display: none;
+        }
+    }
+    @media (max-width: 420px) {
+        display: block;
+        //text-align: right;
+        br {
+            display: block;
+        }
+        span {
+            display: none;
+        }
+    }
 }
 .wrapper-contacts-main {
     display: flex;
     align-items: center;
+    @media (max-width: 540px) {
+        margin-top: 10px;
+    }
+    @media (max-width: 420px) {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
     &__phones {
         display: flex;
         align-items: center;
     }
     &__socials {
         margin-left: 15px;
+        @media (max-width: 540px) {
+            display: none;
+        }
     }
 }
 .wrapper-socials {
@@ -94,9 +166,14 @@ p {
     img {
         width: 32px;
         height: 32px;
+        @media (max-width: $width-md) {
+            width: 28px;
+            height: 28px;
+        }
     }
 }
 .socials-title {
+    text-align: center;
     color: #b4094d;
     font-weight: bold;
     line-height: 2;
@@ -105,6 +182,9 @@ p {
     width: 32px;
     height: 32px;
     margin-right: 10px;
+    @media (max-width: 420px) {
+        display: none;
+    }
 }
 .phone {
     display: block;
@@ -112,6 +192,9 @@ p {
     font-size: 18px;
     font-weight: bold;
     white-space: nowrap;
+    @media (max-width: $width-md) {
+        font-size: 16px;
+    }
     & + & {
         margin-top: 5px;
     }
@@ -119,6 +202,9 @@ p {
 .top-menu {
     text-align: left;
     padding: 0 20px;
+    @media (max-width: $width-md) {
+        display: none;
+    }
     a {
         text-decoration: underline;
         &:hover {
@@ -127,15 +213,119 @@ p {
     }
 }
 .wrapper-inner-header__bottom {
+    z-index: 6;
     background: #021299;
 }
-.wrapper-main-menu {
+.main-menu__list {
     display: flex;
+}
+.main-menu__icon {
+    z-index: 5;
+    display: none;
+    @media (max-width: $width-md) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 28px;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-left: 5px;
+        span {
+            transition: $transition ease 0s;
+            top: calc(50% - 1px);
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            &:first-child {
+                top: 5px;
+            }
+            &:last-child {
+                top: auto;
+                bottom: 5px;
+            }
+        }
+        &._active {
+            span {
+                transform: scale(0);
+                &:first-child {
+                    transform: translateX(5px) rotate(-45deg);
+                    top: calc(50% - 1px);
+                    width: 20px;
+                }
+                &:last-child {
+                    transform: translateX(5px) rotate(45deg);
+                    bottom: calc(50% - 1px);
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+.main-menu {
+    // .menu__icon
+    &__icon {
+    }
+    // .menu__body
+    &__body {
+        @media (max-width: $width-md) {
+            opacity: 0;
+            transition: opacity 0s ease 0s;
+            position: fixed;
+            // height: calc(100%-139px);
+            // height: calc(100vh - 138.77px);
+            width: 100%;
+            // top: 138.77px;
+            left: 0;
+            overflow: auto;
+            z-index: 2;
+            visibility: hidden;
+            padding: 0px 10px 10px 10px;
+            background-color: #021299;
+            // &::before {
+            //     content: "";
+            //     position: fixed;
+            //     width: 100%;
+            //     height: 100.77px;
+            //     top: 0;
+            //     left: 0;
+            //     z-index: 3;
+            //     background-color: #fff;
+            // }
+            // &::after {
+            //     content: "";
+            //     position: fixed;
+            //     width: 100%;
+            //     height: 38px;
+            //     top: 100.77px;
+            //     left: 0;
+            //     z-index: 3;
+            //     background-color: #021299;
+            // }
+            &._active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    // .menu__list
+    &__list {
+        @media (max-width: $width-md) {
+            display: block;
+        }
+    }
+    // .main-menu__item-link
 }
 .main-menu__item {
     border-left: 1px solid #fff;
+    @media (max-width: $width-md) {
+        display: block;
+    }
     &:first-child {
-        border-left: none;
+        @media (min-width: $width-md) {
+            border-left: none;
+        }
     }
     &-link {
         height: 100%;
@@ -150,11 +340,26 @@ p {
             font-size: 13px;
             font-weight: normal;
             color: #ddd;
+            @media (max-width: 910px) {
+                display: none;
+            }
+            @media (max-width: $width-md) {
+                display: block;
+            }
         }
         &:hover,
         &--active {
             background-color: lighten(#021299, 15%);
         }
+        // @media (max-width: 1030px) {
+        //     padding: 10px 15px;
+        // }
+        @media (max-width: 1030px) {
+            padding: 10px;
+        }
+        // @media (max-width: 880px) {
+        //     padding: 10px;
+        // }
     }
 }
 .wrapper-navigation {
@@ -165,8 +370,11 @@ p {
     display: flex;
 }
 .search-form {
+    z-index: 3;
     max-width: 300px;
     margin-left: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
     &__input {
         width: 100%;
         height: 32px;
@@ -188,6 +396,9 @@ p {
 //slider
 .wrapper-inner-slider {
     padding: 20px 0;
+    @media (max-width: $width-md) {
+        padding: 10px 0;
+    }
 }
 .slider {
     position: relative;
@@ -245,15 +456,21 @@ p {
 }
 // mainframe
 .wrapper-inner-mainframe {
+    //display: none;
     background: #f2f2f2;
 }
 .mainframe-wrapper-inner {
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (max-width: $width-md) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 //sidebar
 .mainframe__sidebar {
-    padding: 20px 0;
-    width: 22%;
+    min-width: 250px;
     text-align: center;
     hr {
         height: 3px;
@@ -319,6 +536,12 @@ p {
 }
 //main-content
 .mainframe__content {
-    width: 78%;
-    padding: 20px;
+    width: calc(100%-250px);
+    padding: 0px 10px 0px 20px;
+    img {
+        max-width: 100%;
+    }
+    @media (max-width: $width-md) {
+        padding: 0px 0px 0px 10px;
+    }
 }
