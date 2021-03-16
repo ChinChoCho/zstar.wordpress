@@ -148,67 +148,67 @@
                             <span style="color: #000; font-size: x-large"><strong>Фотогалерея</strong></span>
                         </p>
                         <div class="wrapper-gallery gallery">
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/1.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/1.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/2.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/2.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/3.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/3.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/4.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/4.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/1.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/1.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/2.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/2.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/3.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/3.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/4.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/4.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/1.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/1.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/2.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/2.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/3.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/3.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/4.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/4.jpg" alt="" class="gallery__image" />
                                 </a>
                             </div>
-                            <div class="gallery__item">
+                            <div data-hystmodal="#myModal" class="gallery__item">
                                 <a href="img/gallery/1.jpg" target="_blank" class="gallery__link">
                                     <img src="img/gallery/1.jpg" alt="" class="gallery__image" />
                                 </a>
@@ -300,15 +300,15 @@
                 <!-- </div> -->
             </div>
         </section>
-        <!-- <div class="hystmodal" id="myModal" aria-hidden="true">
-            <div class="hystmodal__window" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close">Close</button>
-                Текст модального окошка.
-                <img src="img/gallery/1.jpg" alt="Изображение в окне" />
-                <img src="img/gallery/1.jpg" alt="Изображение в окне" />
-                <img src="img/gallery/1.jpg" alt="Изображение в окне" />
+        <div class="hystmodal" id="myModal" aria-hidden="true">
+            <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Close</button>
+                    <img class="hystmodal__image" src="img/gallery/1.jpg" alt="Изображение в окне" />
+                </div>
             </div>
-        </div> -->
+        </div>
+        <script src="js/hystmodal.min.js"></script>
         <script src="js/slider.js"></script>
         <script src="js/script.js"></script>
         <script src="js/sticky_menu.js"></script>

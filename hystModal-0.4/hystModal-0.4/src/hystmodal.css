@@ -66,7 +66,7 @@
     flex-shrink: 0;
     flex-grow: 0;
     background: #fff;
-    width: fit-content;
+    width: 600px;
     max-width: 100%;
     overflow: visible;
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
@@ -98,11 +98,6 @@
 .hystmodal__close:focus{
     outline: 2px dotted #afb3b9;
     outline-offset: 2px;
-}
-.hystmodal__image {
-    max-width: 100%;
-    display: block;
-    margin: 5px;
 }
 @media all and (max-width:767px){
     .hystmodal__close{

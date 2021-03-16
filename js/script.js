@@ -20,12 +20,7 @@ function add_toggle_element(elementClass, elementsArray, toggleClass) {
         }
         if (!menuIsActive) {
             //если меню не активно, то даем ему высоту и отступ, в зависимости от прокрутки страницы
-            mainMenuBody.style.cssText =
-                "height: calc(100vh - " +
-                (bottomHeaderH + currentTopHeaderH) +
-                "px); top: " +
-                (bottomHeaderH + currentTopHeaderH) +
-                "px;";
+            mainMenuBody.style.cssText = "height: calc(100vh - " + (bottomHeaderH + currentTopHeaderH) + "px); top: " + (bottomHeaderH + currentTopHeaderH) + "px;";
             menuIsActive = 1; // меню активно
         } else {
             // если меню активно, то убираем все приобретенные стили
@@ -35,8 +30,9 @@ function add_toggle_element(elementClass, elementsArray, toggleClass) {
     });
 }
 
-add_toggle_element(
-    "main-menu__icon",
-    ["main-menu__icon", "main-menu__body", "body"],
-    "_active"
-);
+add_toggle_element("main-menu__icon", ["main-menu__icon", "main-menu__body", "body"], "_active");
+
+const myModal = new HystModal({
+    linkAttributeName: "data-hystmodal",
+    // настройки (не обязательно), см. API
+});
