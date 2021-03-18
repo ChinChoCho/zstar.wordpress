@@ -32,7 +32,7 @@ function add_toggle_element(elementClass, elementsArray, toggleClass) {
 
 add_toggle_element("main-menu__icon", ["main-menu__icon", "main-menu__body", "body"], "_active");
 
-const myModal = new HystModal({
-    linkAttributeName: "data-hystmodal",
-    // настройки (не обязательно), см. API
-});
+// const myModal = new HystModal({
+//     linkAttributeName: "data-hystmodal",
+//     // настройки (не обязательно), см. API
+// });
