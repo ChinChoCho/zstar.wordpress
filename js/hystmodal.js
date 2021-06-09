@@ -22,12 +22,13 @@ function onImageClick() {
     }
     window.addEventListener("keydown", function (e) {
         if (e.which == 27 && modalIsOpen) {
+            // если окно открыто и была нажата клафиша ESC, то закрываем окно
             e.preventDefault();
             closeModal();
         }
     });
     document.addEventListener("mousedown", function (e) {
-        const wrap = e.target.classList.contains("hystmodal__wrap");
+        const wrap = e.target.classList.contains("hystmodal__wrap"); // проверка, было ли нажатие на оверлей
         if (wrap) {
             tappedOnOverlay = 1;
         }
@@ -35,6 +36,7 @@ function onImageClick() {
     document.addEventListener("mouseup", function (e) {
         const wrap = e.target.classList.contains("hystmodal__wrap");
         if (wrap && tappedOnOverlay) {
+            //если нажатие и отпускание мыши было на оверлее, то закрываем окно
             e.preventDefault();
             closeModal();
         }
@@ -52,8 +54,9 @@ function imageExport(e) {
 
 function showModal() {
     if (!modalIsOpen) {
-        let marginSize = window.innerWidth - document.documentElement.clientWidth;
+        let marginSize = window.innerWidth - document.documentElement.clientWidth; //возвращает длину скроллбара
         if (marginSize) {
+            // если скроллбар есть, то смещаем весь контент
             document.getElementsByTagName("html")[0].style.marginRight = marginSize + "px";
             if (document.querySelector(".sticky")) {
                 document.querySelector(".sticky").style.right = marginSize / 2 + "px";
@@ -67,6 +70,7 @@ function showModal() {
 }
 function closeModal() {
     if (modalIsOpen) {
+        // возвращаем все приобретенные классы и стили
         document.getElementsByTagName("html")[0].style.marginRight = "";
         if (document.querySelector(".sticky")) {
             document.querySelector(".sticky").style.right = "";

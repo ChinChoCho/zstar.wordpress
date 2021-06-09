@@ -718,19 +718,19 @@ p {
           border-radius: 7px;
 }
 
-.news {
+.last_news {
   text-align: center;
 }
 
-.news-wrapper-inner {
+.last_news-wrapper-inner {
   margin-top: 15px;
 }
 
-.news-wrapper-inner hr {
+.last_news-wrapper-inner hr {
   clear: both;
 }
 
-.news__item {
+.last_news__item {
   font-size: 15px;
   margin: 10px 0;
   text-align: left;
@@ -738,26 +738,26 @@ p {
 }
 
 @media (max-width: 700px) {
-  .news__item {
+  .last_news__item {
     text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  .news__item {
+  .last_news__item {
     text-align: left;
   }
 }
 
-.news__item:first-child {
+.last_news__item:first-child {
   margin-top: 0;
 }
 
-.news__item:last-child {
+.last_news__item:last-child {
   margin-bottom: 0;
 }
 
-.news__item-image-wrapper {
+.last_news__item-image-wrapper {
   display: block;
   float: left;
   width: -webkit-max-content;
@@ -768,59 +768,59 @@ p {
 }
 
 @media (max-width: 700px) {
-  .news__item-image-wrapper {
+  .last_news__item-image-wrapper {
     float: none;
     margin: 7px auto 5px auto;
   }
 }
 
 @media (max-width: 600px) {
-  .news__item-image-wrapper {
+  .last_news__item-image-wrapper {
     float: left;
     margin: 7px 10px 35px 2px;
   }
 }
 
 @media (max-width: 400px) {
-  .news__item-image-wrapper {
+  .last_news__item-image-wrapper {
     float: left;
     margin: 7px 10px 10px 2px;
   }
 }
 
-.news__item-title {
+.last_news__item-title {
   font-weight: bold;
   text-decoration: underline;
   margin-bottom: 10px;
 }
 
-.news__item-title:hover {
+.last_news__item-title:hover {
   text-decoration: none;
 }
 
-.news__item-description {
+.last_news__item-description {
   margin: 10px 0;
 }
 
 @media (max-width: 700px) {
-  .news__item-description {
+  .last_news__item-description {
     text-align: left;
   }
 }
 
 @media (max-width: 400px) {
-  .news__item-description {
+  .last_news__item-description {
     clear: left;
   }
 }
 
-.news__item-more {
+.last_news__item-more {
   float: left;
   margin-bottom: 5px;
 }
 
 @media (max-width: 600px) {
-  .news__item-more {
+  .last_news__item-more {
     float: right;
     margin-right: 40px;
     margin-bottom: 5px;
@@ -1266,4 +1266,121 @@ p {
   .hystmodal__window {
     margin: 0;
   }
+}
+
+.wrapper-news {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+}
+
+.news__item {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 220px;
+}
+
+.news__item p {
+  color: #000;
+  font-size: 17px;
+  text-align: left;
+  margin: 10px 5px 15px 5px;
+  max-height: -webkit-calc(5 * 1.15em);
+  max-height: calc(5 * 1.15em);
+  overflow: hidden;
+}
+
+.news__item:hover {
+  -webkit-box-shadow: 0px 0px 10px 1px #bbbbbb;
+          box-shadow: 0px 0px 10px 1px #bbbbbb;
+}
+
+@media (max-width: 1060px) {
+  .news__item {
+    width: 220px;
+  }
+}
+
+@media (max-width: 767.9px) {
+  .news__item {
+    width: 185px;
+  }
+}
+
+@media (max-width: 600px) {
+  .news__item {
+    width: 190px;
+  }
+}
+
+.news__item_link {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.news__item_image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news__item_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  vertical-align: bottom;
+}
+
+.news__item_info-views {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news__item_info time,
+.news__item_info span {
+  font-size: 14px;
+  color: #575757;
+}
+
+.news__item_info i {
+  display: block;
+  content: "";
+  background: url("../img/news/eye-dark.svg") no-repeat 50%/cover;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.news__item_info span {
+  margin-right: 5px;
+}
+
+.news__item_info time {
+  margin-left: 5px;
 }

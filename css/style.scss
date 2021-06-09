@@ -590,7 +590,7 @@ p {
     }
 }
 //news
-.news {
+.last_news {
     text-align: center;
     &-title {
     }
@@ -817,6 +817,6 @@ p {
         }
     }
 }
-// gallery --------
+
 @import "gallery";
-// \gallery --------
+@import "news";
