@@ -1,21 +1,25 @@
 "use strict";
 
-window.onscroll = function () {
-    myFunction();
-};
-
-let navbar = document.querySelector(".wrapper-inner-header__bottom");
-let sticky = navbar.offsetTop; // возвращает отступ сверху, относительно родительского элемента
-let height = document.querySelector(".wrapper-inner-header__bottom")
-    .clientHeight; // возвращает высоту элемента
+let headerTop = document.querySelector(".wrapper-inner-header__top");
+let menuOffset = headerTop.clientHeight;
+let headerBottom = document.querySelector(".wrapper-inner-header__bottom");
+let menuHeight = headerBottom.clientHeight; // возвращает высоту элемента
 let stickyPadding = document.querySelector(".sticky-padding"); // элемент, который будет отступом под фиксированным элементом
 
+window.addEventListener("scroll", myFunction);
+window.addEventListener("resize", myFunction);
+
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-        stickyPadding.style.height = height + "px";
-    } else {
-        navbar.classList.remove("sticky");
-        stickyPadding.removeAttribute("style");
-    }
+  menuOffset = headerTop.clientHeight;
+  menuHeight = headerBottom.clientHeight;
+  if (window.pageYOffset >= menuOffset) {
+    headerBottom.classList.add("sticky");
+    stickyPadding.style.height = menuHeight + "px";
+  }
+  if (window.pageYOffset < menuOffset) {
+    headerBottom.classList.remove("sticky");
+    stickyPadding.removeAttribute("style");
+  }
 }
+
+myFunction();

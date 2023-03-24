@@ -67,6 +67,7 @@
     flex-grow: 0;
     background: #fff;
     width: fit-content;
+    min-width: 300px;
     max-width: 100%;
     overflow: visible;
     transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
@@ -81,9 +82,27 @@
     position: absolute;
     z-index: 10;
     top: 0px;
-    right: 0px;
+    // right: 0px;
     padding: 5px;
     background-color: #fff;
+    -webkit-tap-highlight-color: transparent;
+  &-in {
+    right: 0px;
+    .hystmodal__close {
+      background-image: url("/img/icons/close-dark.svg");
+    }
+  }
+  &-out {
+    left: 100%;
+    background-color: transparent;
+    padding: 10px;
+    @media (max-width: 500px) {
+      left: auto;
+      right: 0px;
+      background-color: #fff;
+      padding: 7px;
+    }
+  }
 }
 .hystmodal__close {
     display: block;
@@ -92,6 +111,7 @@
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
+    // background-image: url("/img/icons/close-light.svg");
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' stroke='%23000' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
     background-size: 100% 100%;
     border: none;
@@ -121,6 +141,6 @@
     //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23111' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
     // }
     .hystmodal__window {
-        margin: 0;
+        // margin: 0;
     }
 }
