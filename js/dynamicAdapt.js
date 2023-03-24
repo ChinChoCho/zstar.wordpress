@@ -39,14 +39,7 @@ DynamicAdapt.prototype.init = function () {
     this.mediaQueries = Array.prototype.map.call(
         this.оbjects,
         function (item) {
-            return (
-                "(" +
-                this.type +
-                "-width: " +
-                item.breakpoint +
-                "px)," +
-                item.breakpoint
-            );
+            return "(" + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
         },
         this
     );
@@ -66,12 +59,9 @@ DynamicAdapt.prototype.init = function () {
         const mediaBreakpoint = mediaSplit[1];
 
         // массив объектов с подходящим брейкпоинтом
-        const оbjectsFilter = Array.prototype.filter.call(
-            this.оbjects,
-            function (item) {
-                return item.breakpoint === mediaBreakpoint;
-            }
-        );
+        const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
+            return item.breakpoint === mediaBreakpoint;
+        });
         matchMedia.addListener(function () {
             _this.mediaHandler(matchMedia, оbjectsFilter);
         });
@@ -87,7 +77,7 @@ DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
             this.moveTo(оbject.place, оbject.element, оbject.destination);
         }
     } else {
-        for (let i = 0; i < оbjects.length; i++) {
+        for (let i = оbjects.length - 1; i >= 0; i--) {
             const оbject = оbjects[i];
             if (оbject.element.classList.contains(this.daClassname)) {
                 this.moveBack(оbject.parent, оbject.element, оbject.index);
