@@ -123,7 +123,7 @@ h1 {
   color: #fff;
   font-weight: bold;
   padding-right: 40px;
-  background: #021299 url("/wp-content/themes/zstar_theme/assets/img/icons/right-arrow.svg") no-repeat;
+  background: #021299 url("../img/icons/right-arrow.svg") no-repeat;
   background-position: -webkit-calc(100% - 10px) 50%;
   background-position: calc(100% - 10px) 50%;
   -webkit-background-size: 20px 20px;
@@ -1048,7 +1048,7 @@ h1 {
   display: block;
   min-width: 20px;
   min-height: 20px;
-  background: url("/wp-content/themes/zstar_theme/assets/img/icons/right-arrow.svg") no-repeat;
+  background: url("../img/icons/right-arrow.svg") no-repeat;
   margin: auto;
   margin-left: 15px;
 }
