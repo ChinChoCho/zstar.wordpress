@@ -1397,12 +1397,10 @@ h1 {
   max-height: 70vh;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .mainframe__content p:not(.news__title) {
-  text-align: left;
+  text-align: justify;
   line-height: 1.5;
 }
 
