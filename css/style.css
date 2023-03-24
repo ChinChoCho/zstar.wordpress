@@ -1623,7 +1623,7 @@ h1 {
   text-decoration: underline;
 }
 
-.footer__column a.phone:hover {
+.footer__column a .phone:hover {
   text-decoration: none;
 }
 
@@ -1647,6 +1647,25 @@ h1 {
   color: #ddd;
   font-size: 14px;
   margin-left: 5px;
+}
+
+.footer__column .wrapper-contacts-main__socials {
+  margin: 0;
+  margin-top: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+@media (max-width: 540px) {
+  .footer__column .wrapper-contacts-main__socials {
+    display: block;
+  }
+}
+
+.footer__column .wrapper-contacts-main__socials .socials-title {
+  display: none;
 }
 
 .footer__column .phones-icon {
@@ -1681,7 +1700,7 @@ h1 {
 
 @media (max-width: 480px) {
   .footer__column .widget {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 }
 
