@@ -111,12 +111,14 @@
                         <!-- </div> -->
                         <form action="" method="get" class="search-form">
                             <div class="wrapper-search">
-                                <input
-                                    class="search-form__input"
-                                    name="search"
-                                    placeholder="Поиск..."
-                                    type="search"
-                                />
+                                <label for="search">
+                                    <input
+                                        class="search-form__input"
+                                        name="search"
+                                        placeholder="Поиск..."
+                                        id="search"
+                                        type="search"
+                                /></label>
                                 <button type="submit" class="search-form__button"></button>
                             </div>
                         </form>
@@ -126,50 +128,10 @@
             <div class="sticky-padding"></div>
         </section>
         <!-- ====================== PAGE ============================== -->
-        <section class="wrapper-inner-slider">
-            <div class="wrapper-inner">
-                <div class="slider">
-                    <div class="slider__item">
-                        <img src="img/1.png" alt="" />
-                        <div class="slider__item-text-wrapper">
-                            <h1 class="slider__item-title">
-                                Подготовка к ЕНТ, ЕГЭ и вступительным экзаменам
-                            </h1>
-                            <p class="slider__item-description">
-                                Подготовка к Единому Национальному Тестированию (ЕНТ), к Единому
-                                Госсдарственному Экзамену (ЕГЭ), КТА
-                            </p>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <img src="img/2.png" alt="" />
-
-                        <div class="slider__item-text-wrapper">
-                            <h1 class="slider__item-title">Поступление в ВУЗы России</h1>
-                            <p class="slider__item-description">
-                                Поступай в ВУЗы России вместе с нами.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="slider__item">
-                        <img src="img/3.png" alt="" />
-                        <div class="slider__item-text-wrapper">
-                            <h1 class="slider__item-title">
-                                Дистанционное образование в ВУЗах России
-                            </h1>
-                            <p class="slider__item-description">
-                                Дистанционное образование в ВУЗах России - Томский государственный
-                                университет систем управления и радиоэлектроники
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="wrapper-inner-mainframe">
             <div class="wrapper-inner mainframe-wrapper-inner">
                 <aside class="mainframe__sidebar sidebar">
-                    <div data-da=".main-menu__body,600,last" class="sidebar-banners">
+                    <div data-da=".main-menu__body,767,last" class="sidebar-banners">
                         <a href="#" class="sidebar-banners__item">
                             <img src="img/registration.png" alt="" />
                         </a>
@@ -187,14 +149,18 @@
                         </a>
                     </div>
                     <div
-                        data-da=".mainframe__content,600,last"
+                        data-da=".mainframe__content,767,last"
                         class="sidebar__last_news last_news"
                     >
                         <h1 class="last_news-title">Новости & События</h1>
                         <div class="last_news-wrapper-inner">
                             <div class="last_news__item">
                                 <a href="#" class="last_news__item-image-wrapper">
-                                    <img src="img/news/jvnews_60x60_1.jpg" alt=""
+                                    <img
+                                        width="60"
+                                        height="60"
+                                        src="img/news/jvnews_60x60_1.jpg"
+                                        alt=""
                                 /></a>
                                 <a href="#" class="last_news__item-title"
                                     >Старт Открытой Университетской предметной олимпиады для
@@ -209,7 +175,12 @@
                             <hr noshade="noshade" />
                             <div class="last_news__item">
                                 <a href="#" class="last_news__item-image-wrapper">
-                                    <img src="img/news/jvnews_60x60_2.jpg" alt="" />
+                                    <img
+                                        width="60"
+                                        height="60"
+                                        src="img/news/jvnews_60x60_2.jpg"
+                                        alt=""
+                                    />
                                 </a>
                                 <a href="#" class="last_news__item-title"
                                     >Старт открытой студенческой олимпиады "Стань магистром!"
@@ -224,7 +195,12 @@
                             <hr noshade="noshade" />
                             <div class="last_news__item">
                                 <a href="#" class="last_news__item-image-wrapper">
-                                    <img src="img/news/jvnews_60x60_3.jpg" alt="" />
+                                    <img
+                                        width="60"
+                                        height="60"
+                                        src="img/news/jvnews_60x60_3.jpg"
+                                        alt=""
+                                    />
                                 </a>
 
                                 <a href="#" class="last_news__item-title"
@@ -409,104 +385,86 @@
             </div>
         </section>
         <!-- ====================== FOOTER ============================== -->
-        <section class="wrapper-inner-footer">
+        <footer class="wrapper-inner-footer">
             <div class="wrapper-inner footer-column-wrapper">
-                <!-- <div class="footer-column-wrapper__first"> -->
-                <div class="footer__links-column footer__links-column-main">
-                    <div class="footer__heading">
-                        <span>Центр международного<br />образования</span>
-                    </div>
-                    <div class="footer__item">
-                        <a href="index.html" class="footer__link">Главная</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="fotogalery.html" class="footer__link">Фотогалерея</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="news.html" class="footer__link">Новости</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Статьи</a>
+                <div class="footer__column">
+                    <h1 class="footer__heading">Центр международного образования</h1>
+                    <div>
+                        <div>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Тесты</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </div>
                     </div>
                 </div>
-                <div class="footer__links-column footer__links-column-materials">
-                    <div class="footer__heading">
-                        <span>Материалы</span>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Тесты</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Профдиагностика</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Видео уроки</a>
+                <div class="footer__column">
+                    <h1 class="footer__heading">Материалы</h1>
+                    <div>
+                        <div>
+                            <li><a href="#">Записаться на консультацию</a></li>
+                            <li><a href="#">Вопрос-Ответ</a></li>
+                            <li><a href="#">Профдиагностика</a></li>
+                            <li><a href="#">Видео уроки</a></li>
+                        </div>
                     </div>
                 </div>
-                <br class="delete" />
-                <div class="footer__links-column footer__links-column-support">
-                    <div class="footer__heading">
-                        <span>Поддержка</span>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Регистрация</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Вопрос-Ответ</a>
-                    </div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Отзывы</a>
+                <div class="footer__column">
+                    <h1 class="footer__heading">Обратная связь</h1>
+                    <div>
+                        <div>
+                            <li><a href="#">Отзывы</a></li>
+                        </div>
                     </div>
                 </div>
-                <br />
-                <!-- </div> -->
-                <!-- <div class="footer-column-wrapper__second"> -->
-                <div class="footer__links-column footer__links-column-about">
-                    <div class="footer__heading"><span>О нас</span></div>
-                    <div class="footer__item">
-                        <a href="#" class="footer__link">Контакты</a>
+                <div class="footer__column">
+                    <h1 class="footer__heading">Контактная информация</h1>
+                    <div class="widget">
+                        <span class="wrapper-contacts-address"
+                            ><span>Алматы</span><span class="delete">, 8 микрорайон</span
+                            ><span>, <br />ул. </span>Шаляпина, 31а</span
+                        >
                     </div>
-                    <span class="wrapper-contacts-address wrapper-contacts-address--footer"
-                        ><span>Алматы</span><span class="delete">, 8 микрорайон</span
-                        ><span>, <br />ул. </span>Шаляпина, 31а</span
-                    >
-                    <div class="wrapper-phones wrapper-phones--footer">
-                        <a class="phone" href="tel:+77273287510">8 (727) 328-75-10</a>
-                        <a class="phone" href="tel:+77077854070">8 (707) 785-40-70</a>
+                    <div class="widget">
+                        <div class="wrapper-contacts-main__phones">
+                            <img src="/img/tel.png" alt="" class="phones-icon" />
+                            <div class="wrapper-phones">
+                                <a class="phone" href="tel:+77273287510">8 (727) 328-75-10</a>
+                                <a class="phone" href="tel:+77077854070">8 (707) 785-40-70</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <br class="delete" />
-                <div class="footer__links-column footer__links-column-socials">
-                    <div class="footer__heading">
-                        <span>Соц. сети</span>
-                    </div>
-                    <div class="wrapper-socials wrapper-socials--footer">
-                        <a href="https://vk.com/zstarkz" class="socials-item" target="_blank"
-                            ><img src="img/vk.png" alt=""
-                        /></a>
-                        <a
-                            href="https://www.instagram.com/zstarkz/"
-                            class="socials-item"
-                            target="_blank"
-                            ><img src="img/instagram.png" alt=""
-                        /></a>
-                        <a
-                            href="https://twitter.com/ZStarKZ_almaty"
-                            class="socials-item"
-                            target="_blank"
-                            ><img src="img/twitter.png" alt=""
-                        /></a>
-                        <a
-                            href="https://www.facebook.com/ZStarKZalmaty"
-                            class="socials-item"
-                            target="_blank"
-                            ><img src="img/fb.png" alt=""
-                        /></a>
+                    <div class="wrapper-contacts-main__socials widget">
+                        <span class="socials-title">Мы в соц. сетях</span>
+                        <div class="wrapper-socials wrapper-socials--header">
+                            <a href="https://vk.com/zstarkz" class="socials-item" target="_blank"
+                                ><img src="img/vk.png" alt=""
+                            /></a>
+                            <a
+                                href="https://www.instagram.com/zstarkz/"
+                                class="socials-item"
+                                target="_blank"
+                                ><img src="img/instagram.png" alt=""
+                            /></a>
+                            <a
+                                href="https://twitter.com/ZStarKZ_almaty"
+                                class="socials-item"
+                                target="_blank"
+                                ><img src="img/twitter.png" alt=""
+                            /></a>
+                            <a
+                                href="https://www.facebook.com/ZStarKZalmaty"
+                                class="socials-item"
+                                target="_blank"
+                                ><img src="img/fb.png" alt=""
+                            /></a>
+                        </div>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
-        </section>
+        </footer>
         <script src="js/slider.js"></script>
         <script src="js/script.js"></script>
         <script src="js/sticky_menu.js"></script>
